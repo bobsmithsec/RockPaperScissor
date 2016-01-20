@@ -1,0 +1,17 @@
+<template name="gamePlay">
+	<h2 class="game-status">{{gameStatus}}</h2>
+	{{#if canPlaceBet}}
+		<button class="choose" name="rock">Rock</button>
+		<button class="choose" name="paper">Paper</button>
+		<button class="choose" name="scissor">Scissor</button>
+	{{/if}}
+	{{#if betPlaced}}
+		<h2 class="bet-placed">You bet {{betPlaced}}</h2>
+	{{/if}}
+	{{#if otherPlayerNotJoined}}
+		<a href="{{theOtherPlayerUrl}}">Link to the other player</a>
+	{{/if}}
+	{{#if gameFinished}}
+		<a href="{{pathFor route='gameCreate'}}">Game Home</a>
+	{{/if}}
+</template>

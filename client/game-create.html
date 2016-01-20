@@ -1,0 +1,10 @@
+<template name="gameCreate">
+	<h1> Welcome to Rock Scissor Paper! </h1>
+	{{#if gameCreated}}
+		<button class="enter-game">Enter Game</button>
+		<br/><br/>
+		<a href="{{getPlayer2Route}}">Link for Player 2</a>	
+	{{else}}
+		<button class="create-game" id="create-game">Create Game</button>
+	{{/if}}
+</template>
